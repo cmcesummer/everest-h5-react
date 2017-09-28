@@ -17,7 +17,7 @@ class Buttons extends Component {
     }
     return (
       <div style={height}>
-        <button onClick={this.handle.bind(this)}>222</button>
+        <button onClick={this.handle.bind(this)}>show props</button>
         {/* <span>{this.props.creditCard.information}</span>  */}
       </div>       
     )

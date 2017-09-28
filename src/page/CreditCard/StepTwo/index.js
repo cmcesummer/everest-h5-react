@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import '../stepTwo.less'
 // import InputItem from './comp/InputItem.js'
 import CompanyName from './comp/CompanyName.js'
-// import ButtonNext from './comp/Button.js'
+import ButtonNext from './comp/Button.js'
 import { connect } from 'react-redux'
 
 class StepTwo extends Component {
@@ -18,10 +18,8 @@ class StepTwo extends Component {
         <CompanyName stateName="department" name="任职部门" type="text" placeholder="任职部门" maxLength="20"/>
         <CompanyName stateName="occupation" name="职业/岗位" type="text" placeholder="职业/岗位" maxLength="15"/>
         <CompanyName stateName="employerAddressDetail" type="text" placeholder="卡片将邮寄至单位地址，请详细填写" maxLength="40"/>
-        {/* <ButtonNext/> */}
-        {/* <InputItem name="任职部门" type="text" placeholder="任职部门"></InputItem>
-        <InputItem name="职业/岗位" type="text" placeholder="职业/岗位"></InputItem>
-        <InputItem type="text" placeholder="卡片将邮寄至单位地址，请详细填写"></InputItem> */}
+        <ButtonNext/>
+       
         <br/>
         <span>cardType: {this.props.cardType}</span>
 
