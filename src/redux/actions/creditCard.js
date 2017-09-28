@@ -1,6 +1,7 @@
 
 export const SETMESSAGE = 'creditCard/SETMESSAGE';
 export const SETAJAXMESSAGE = 'creditCard/SETAJAXMESSAGE';
+export const CHANGECARDTYPE = 'creditCard/CHANGECARDTYPE'
 
 export function setmessage(key, val) {
   return {
@@ -14,5 +15,12 @@ export const setAjaxMessage = (obj) => {
   return {
     type: SETAJAXMESSAGE,
     obj
+  }
+}
+
+export const changeCardType = (cardType) => {
+  return {
+    type: CHANGECARDTYPE,
+    cardType
   }
 }

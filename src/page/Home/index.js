@@ -23,15 +23,15 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div className="home_index">
-     
-        <span onClick={this.goRoute.bind(this)}>home_index</span>
-        <br/>
-        <span onClick={this.goRoutes.bind(this)}>stepTwo</span>
 
-    
-          
-      </div>
+      <ul className="home_index">
+        <li>
+          <Link to="/roat/2">pathname roat</Link>
+        </li>
+        <li>
+          <Link to="/creditCard/two">pathname roat</Link>
+        </li>
+      </ul>
     )
   }
 

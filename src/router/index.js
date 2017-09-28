@@ -5,6 +5,7 @@ import {Route, Switch, withRouter} from 'react-router-dom';
 import Home from '@/page/Home'
 import Routte from '@/page/Route'
 import CreditCardTwo from '@/page/CreditCard/StepTwo'
+import CreditCard from '@/page/CreditCard'
 import NotFound from '@/page/NotFound'
 
 
@@ -13,13 +14,13 @@ import NotFound from '@/page/NotFound'
 
 export default () => (
   <div className="route_index">
-    222
-    <Route exact path="/" component={Home}  />
-    {/* <Switch>
+
+    {/* <Route exact path="/" component={Home}  /> */}
+    <Switch>
       <Route exact path="/" component={Home}  />
       <Route exact path="/roat/:id" component={(Routte)} />
-      <Route exact path="/creditCard/two" component={(CreditCardTwo)} />
+      <Route path="/creditCard" component={(CreditCard)} />
       <Route component={NotFound} />
-    </Switch> */}
+    </Switch>
   </div>
 )
