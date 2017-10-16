@@ -1,13 +1,8 @@
 import commonReg from './commonReg.js'
 
 export function testChineseNum(str, num) {
-  let arr = str.split(''),
-  cheArr = [];
-
-  for (let item of arr) {
-    if (commonReg.Chinese.test(item)) {
-      cheArr.push(item);
-    }
-  }
-  return cheArr.length > num - 1;
+  const reg = /[\u4e00-\u9fa5]/g;
+  const arr = str.match(reg)
+  
+  return arr.length > num - 1;
 }
