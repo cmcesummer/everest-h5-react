@@ -26,7 +26,11 @@ npm run build --report
 是因为最近公司在做App项目，感觉前端受到冷落，所以打算学一波RN,在这之前先看看react
 想学的想看的想玩的太多，时间太少，鱼与熊掌。
 ```
-
+```
+git@192.168.17.117:frontendGp/things.git
+git@192.168.17.117:everest/everest-mweb.git
+git@192.168.17.117:everest/everest-channel-mweb.git
+```
 ## changeLog
 - 9.25  
   react-router4是没有提供路由钩子的，通过Redirect来实现，好好看下官方文档   
