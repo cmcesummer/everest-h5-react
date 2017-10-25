@@ -10,17 +10,17 @@ class CreditCard extends Component {
   }
 
   componentDidMount() {
-     
+    
   }
 
   render() {
     return (
       <div>
-        
+
 
 
         <Swipe></Swipe>
-        
+
 
 
         <Route path={`${this.props.match.url}/two`} component={CreditCardTwo}></Route>
@@ -28,5 +28,8 @@ class CreditCard extends Component {
     )
   }
 }
+
+
+
 
 export default CreditCard

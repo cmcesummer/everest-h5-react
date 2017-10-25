@@ -24,3 +24,28 @@ export const changeCardType = (cardType) => {
     cardType
   }
 }
+
+export function setAjaxMessageFnc() {
+  return function (dispatch, getState) {
+    var num = parseInt(Math.random() * 100);
+    var obj = {
+      occupation: '大撒旦撒aa'
+    }
+    setTimeout(() => {
+      console.log(222)
+      dispatch(setAjaxMessage(obj));
+    }, 5000 )
+    // fetch('/api/util/getSmsCode', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/x-www-form-urlencoded'
+    //   },
+    //   body: 'mobile=185123429' + num
+    // }).then(res => {
+    //   return res.json()
+    // }).then(data => {
+    //   console.log(data);
+    //   dispatch(setAjaxMessage(obj));
+    // })
+  }
+}

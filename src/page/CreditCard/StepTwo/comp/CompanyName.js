@@ -12,7 +12,7 @@ class CompanyName extends Component {
     super(props)
     this.state = {
       onerror: false,
-      value: props.creditCard.information[props.stateName] || '',
+      value: props.value || '', //props.creditCard.information[props.stateName] || '',
       ondelete: false
     }
   }

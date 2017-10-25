@@ -4,12 +4,15 @@ import '../stepTwo.less'
 import CompanyName from './comp/CompanyName.js'
 import ButtonNext from './comp/Button.js'
 import { connect } from 'react-redux'
+import {setAjaxMessageFnc} from '@/redux/actions/creditCard.js'
 
 class StepTwo extends Component {
   constructor(props) {
     super(props)
   }
- 
+ componentDidMount() {
+   this.props.setAjaxMessageFnc();
+ }
   render() {
     return (
       <div className="step">
@@ -21,7 +24,9 @@ class StepTwo extends Component {
         <ButtonNext/>
        
         <br/>
-        <span>cardType: {this.props.cardType}</span>
+        <span>cardType: {this.props.cardType}</span>  <br/>
+
+        <span>{this.props.creditCard.occupation}</span>
 
       </div>
     )
@@ -29,9 +34,16 @@ class StepTwo extends Component {
 }
 
 const mapStateToProps = state => ({
-  cardType: state.creditCard.cardType
+  cardType: state.creditCard.cardType,
+  creditCard: state.creditCard
 })
 
-const mapDispatchToProps = {}
+const mapDispatchToProps = dispatch => {
+  return {
+    setAjaxMessageFnc() {
+      dispatch(setAjaxMessageFnc())
+    }
+  }
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(StepTwo)
