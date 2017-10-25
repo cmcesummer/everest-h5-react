@@ -12,11 +12,25 @@ class CompanyName extends Component {
     super(props)
     this.state = {
       onerror: false,
-      value: props.value || '', //props.creditCard.information[props.stateName] || '',
+      // value: this.props.creditCard.information.occupation || '',//props.value || '',//props.creditCard.information[props.stateName] || '',//, //
       ondelete: false
     }
   }
 
+  // componentWillUpdate(nextProps, nextState) {
+  //   console.log(nextProps);
+  //   this.setState({
+  //     // value: nextProps.creditCard.information.occupation
+  //   })
+  // }
+
+  // componentDidMount() {
+  //   console.log(this.props.creditCard.information.occupation)
+  //   this.setState({
+  //     value: this.props.creditCard.information.occupation
+  //   })
+  // }
+  
   setDeleteShow() {
     this.setState({
       ondelete: true
@@ -74,8 +88,9 @@ class CompanyName extends Component {
   }
 
   render() {
+    console.log(this.state.value)
     return <InputItem type={this.props.type}  placeholder={this.props.placeholder} name={this.props.name} maxLength={this.props.maxLength}
-      onerror={this.state.onerror}  value={this.state.value} ondelete={this.state.ondelete}
+      onerror={this.state.onerror}  value={this.props.creditCard.information.occupation} ondelete={this.state.ondelete}
       onFocus={this.onFocus.bind(this)} onBlur={this.onBlur.bind(this)} onChange={this.onChange.bind(this)}
       onClear={this.clearVal.bind(this)}></InputItem>
   }

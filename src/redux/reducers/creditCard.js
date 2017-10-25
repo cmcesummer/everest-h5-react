@@ -21,9 +21,9 @@ export default function reducer(state = initState, action) {
       }
     //对信息整体赋值  
     case SETAJAXMESSAGE:
+      state.information = action.obj
       return {
         ...state,
-        information: action.obj
       }
     //改变swipe卡种类型  
     case CHANGECARDTYPE:
